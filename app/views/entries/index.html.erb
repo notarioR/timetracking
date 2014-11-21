@@ -1,0 +1,27 @@
+
+<section class="center">
+	
+	<%= flash_message %>
+	
+	<h1> Last entries </h1> 
+	<h2><%= @project.name %></h2> 
+	<ul>	
+ 	<% @entries.current_month.each do |entry| %>
+	 <li> 
+	 <%= entry.hours %> hours
+	 <%= entry.minutes %> minutes - 
+	 <%= entry.comment %> -
+	 <%= entry.datetime %> 
+	 </li>
+ <% end %>
+ <p>Total hours <%= total_month %> </p>
+<%= link_to("Cancel", projects_path) %>
+<%= link_to("New entry", new_project_entry_path) %>
+
+
+ 
+</ul>
+
+</section>
+
+

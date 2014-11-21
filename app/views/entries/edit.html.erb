@@ -1,0 +1,15 @@
+<h1>Edit Entries</h1>
+<%= form_for [@project, @entry] do |f| %>
+  <%= f.label :hours %>
+  <%= f.text_field :hours %>
+  <br>
+  <%= f.label :minutes %>
+  <%= f.text_field :minutes %>
+  <br>
+  <%= f.label :datetime %>
+  <%= f.date_field :datetime %>
+  <br>
+
+  <%= f.submit 'Save' %>
+  <%= link_to("Cancel", projects_path) %>
+  <% end %>

@@ -1,0 +1,15 @@
+<section class="center">
+<h1>Last projects</h1>
+<ul>
+	<% @projects.each do |project| %>
+	<li><%= project.name %> 
+	<% if project.description.present? %> <!-- Present mejor que if project.description != nil -->
+		- <%= project.description %>
+		<% end %></li>
+	<% end %>
+</ul>
+
+<p><a href="/">Home</a></p>
+</section>
+
+
